@@ -23,13 +23,13 @@ public class  Pizza {
         if(isVeg){
             basePrice=300;
             toppingPrice=70;
-            this.totalprice= totalprice+basePrice+toppingPrice;
+            this.totalprice= this.totalprice+basePrice+toppingPrice;
 
         }
         else{
             basePrice=400;
             toppingPrice=120;
-            this.totalprice= totalprice+basePrice+toppingPrice;
+            this.totalprice= this.totalprice+basePrice+toppingPrice;
         }
         paperbagPrice=20;
         cheesePrice=80;
@@ -43,7 +43,7 @@ public class  Pizza {
 
     public int getPrice(){
 
-        return totalprice;
+        return this.totalprice;
     }
 
     public void addExtraCheese(){
@@ -54,7 +54,7 @@ public class  Pizza {
         }
         else{
             ischessadded=true;
-            this.totalprice=totalprice+cheesePrice;
+            this.totalprice=this.totalprice+cheesePrice;
         }
     }
 
@@ -62,7 +62,7 @@ public class  Pizza {
         // your code goes here
 
         if(isToppingadded==false){
-            this.totalprice=totalprice+toppingPrice;
+            this.totalprice=this.totalprice+toppingPrice;
             isToppingadded=true;
         }
     }
@@ -70,7 +70,7 @@ public class  Pizza {
     public void addTakeaway(){
         // your code goes here
         if(isPaperabackadded==false){
-            this.totalprice=totalprice+paperbagPrice;
+            this.totalprice=this.totalprice+paperbagPrice;
             isPaperabackadded=true;
         }
     }
@@ -90,7 +90,7 @@ public class  Pizza {
             if(isPaperabackadded==true){
                 bill=bill+"Paperbag Added: "+paperbagPrice+"\n";
             }
-            bill=bill+"Total Price: "+totalprice+"\n";
+            bill=bill+"Total Price: "+this.totalprice+"\n";
 
         }
 
